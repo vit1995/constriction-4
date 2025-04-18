@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>HomePage</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20250418171618">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header data-scroll="320" class="header">
+			<div class="header__container">
+				<div class="header__top">
+					<div class="header__logo-body">
+						<a href="#" class="header__logo"><img src="img/header/logo.png" alt="#"></a>
+
+						<div class="header__content">
+							<p class="header__logo-title">МАстер мебели 39</p>
+							<p class="header__logo-text">Перетяжка мебели в Калининграде</p>
+						</div>
+					</div>
+					<address data-da=".menu, 1024" class="header__address">
+						<div class="header__address-img"><img src="img/header/local.png" alt="#"></div>
+						<div class="header__address-text"><strong>г. Калининград,</strong> ул. Генерала Соммера, 21</div>
+					</address>
+					<div data-da=".menu, 1024" class="header__social">
+						<div class="header__social-avatar"><img src="img/header/avatar.png" alt="#"></div>
+						<p class="header__social-text"><strong>Дмитрий</strong> менедже
+							сейчас на связи</p>
+						<div class="header__social-item">
+							<a href="#" class="header__social-link header__social-link--whatsap"><img src="img/header/wha.png" alt="#"></a>
+							<a href="#" class="header__social-link header__social-link--telergam"><img src="img/header/tele.png" alt="#"></a>
+
+						</div>
+					</div>
+					<a data-popup="#popup" class="header__button" href="#">ЗАКАЗАТЬ ЗВОНОК</a>
+					<div data-da=".menu, 1024" class="header__info">
+						<div class="header__info-clock">ПН-ВС: c 8:00 до 20:00</div>
+						<a class="header__info-phone" href="tel:79062129450">+7 (906) 212-94-50</a>
+					</div>
+					<button type="button" class="menu__icon icon-menu"><span></span></button>
+
+				</div>
+				<div class="header__menu menu">
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item"><a href="#" class="menu__link"><img src="img/header/home.png" alt="#"></a></li>
+							<li class="menu__item"><a data-goto=".calculator" href="#" class="menu__link">Калькулятор</a></li>
+							<li class="menu__item"><a data-goto=".services" href="#" class="menu__link">Наши услуги</a></li>
+							<li class="menu__item"><a data-goto=".steps" href="#" class="menu__link">Этапы работ</a></li>
+							<li class="menu__item"><a data-goto=".look" href="#" class="menu__link">Примеры работ</a></li>
+							<li class="menu__item"><a data-goto=".material" href="#" class="menu__link">Ткани</a></li>
+							<li class="menu__item"><a data-goto=".reviews" href="#" class="menu__link">Отзывы</a></li>
+							<li class="menu__item"><a data-goto=".send" href="#" class="menu__link">Оценка по фото</a></li>
+
+						</ul>
+					</nav>
+				</div>
+
+			</div>
+		</header>
+		<div id="popup" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close">
+						<svg role="presentation" class="t-popup__close-icon" width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+							<g stroke="none" stroke-width="1" fill="#000000" fill-rule="evenodd">
+								<rect transform="translate(11.313708, 11.313708) rotate(-45.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="2" height="30"></rect>
+								<rect transform="translate(11.313708, 11.313708) rotate(-315.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="2" height="30"></rect>
+							</g>
+						</svg>
+
+					</button>
+					<div class="popup__body">
+						<h2 class="popup__title "><strong>Оставьте заявку</strong>
+							<span>на расчёт</span> стоимости перетяжки
+						</h2>
+						<p class="popup__subtitle ">Зафиксируем за вашим номером скидку 10% + подарок</p>
+						<form class="popup__form" data-popup-message="#popup-message" data-ajax action="files/sendmail/sendmail.php" method="POST">
+							<div class="popup__form-block">
+								<label class="popup__form-label">Ваш телефон</label>
+								<input data-inputmask="'mask': '375 (99)-999-99-99'" data-required type="text" name="phone" data-error="Заполните поле" placeholder="375(__) ___ __ __" class="popup__input bock-form__input input">
+
+							</div>
+							<div class="popup__form-block">
+								<label class="popup__form-label">Загрузите фото мебели (не обязательно)</label>
+
+								<label class="input-file">
+									<input type="file" name="file">
+									<span class="input-file-popup"><img class="input-file__img" src="img/form/download.png" alt="#">Загрузить фото </span>
+								</label>
+							</div>
+
+							<button type="submit" class="button-form button">Рассчитать стоимость</button>
+							<div class="checkbox">
+								<input data-required id="c_2" data-error="Ознакомтесь с обработкой данных" class="checkbox__input" type="checkbox" value="Соглашаюсь" name="chek">
+								<label for="c_2" class="checkbox__label"><span class="checkbox__text">Соглашаюсь с <a href="#">обработкой данных</a></span></label>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="popup-message" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close"><svg role="presentation" class="t-popup__close-icon" width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+							<g stroke="none" stroke-width="1" fill="#000000" fill-rule="evenodd">
+								<rect transform="translate(11.313708, 11.313708) rotate(-45.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="2" height="30"></rect>
+								<rect transform="translate(11.313708, 11.313708) rotate(-315.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="2" height="30"></rect>
+							</g>
+						</svg></button>
+					<div class="popup__body">
+						<h2 style="color: rgb(31, 31, 31); line-height: 130%;" class="popup__title">СПАСИБО ВАША ФОРМА УСПЕШНО
+							ОТПРАВЛЕНА </h2>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<main class="page">
+			<section data-fullscreen class="hero">
+				<img class="hero__image-bg" src="img/hero/bg.jpg" alt="#">
+				<div class="hero__container">
+					<div data-fullscreen class="hero__body">
+						<h1 class="hero__title title">
+							<strong>Перетяжка мебели </strong>
+							<span>от 2000₽</span>
+							<strong> в Калининграде</strong>
+							с гарантией до 2 лет!
+						</h1>
+						<div class="hero__buttons">
+							<a data-popup="#popup" class="hero__button button" href="#">
+								<strong>Рассчитать стоимость по фото</strong>
+								<span>и получить скидку 10%</span>
+							</a>
+							<div class="hero__text">
+								Пришлите фото
+								испорченной мебели мастеру в WhatsApp и
+								узнайте цену перетяжки со скидкой
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</section>
+			<div class="advantages">
+				<div class="advantages__container">
+					<div class="advantages__body">
+						<div class="advantages__items">
+							<div class="advantages__item">
+								<div class="advantages__image"><img src="img/advantages/01.png" alt="#"></div>
+								<p class="advantages__text"><span>удобная логистика</span>
+									мебели в цех и обратно</p>
+							</div>
+							<div class="advantages__item">
+								<div class="advantages__image"><img src="img/advantages/02.png" alt="#"></div>
+								<p class="advantages__text"><span>подарки при заказе</span>
+									от определённой суммы</p>
+							</div>
+							<div class="advantages__item">
+								<div class="advantages__image"><img src="img/advantages/03.png" alt="#"></div>
+								<p class="advantages__text"><span>работаем по договору,
+									</span>
+									всё официально</p>
+							</div>
+							<div class="advantages__item">
+								<div class="advantages__image"><img src="img/advantages/04.png" alt="#"></div>
+								<p class="advantages__text"><span>5000+ тканей
+									</span>
+									на выбор
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<section class="page__calculator calculator">
+				<div class="calculator__container ">
+					<div class="calculator__body">
+						<!-- верх квиза -->
+						<div id="calc" class="calculator__top">
+							<h4 class="calculator__top-title title"><strong>Рассчитайте стоимость перетяжки</strong> в
+								калькуляторе
+								за <span>1 минуту!</span></h4>
+
+							<div class="calculator__top-subtitle subtitle">это бесплатно и интересно</div>
+						</div>
+						<!-- Оболонка слайдера -->
+						<div id="wrapper-content" class="calculator__wrapper-content">
+							<div class="calculator__slider swiper swiper-container">
+								<!-- Частина слайдера, що рухається -->
+								<form data-popup-message="#popup-message" data-dev action="files/sendmail/sendmail.php" method="POST" class="calculator__wrapper swiper-wrapper">
+									<!-- 1 Слайд -->
+									<div class="calculator__slide swiper-slide slide-calculator slide-main-block">
+										<div class="slide-calculator__body">
+											<h5 class="slide-calculator__title">Где нужно выполнить перетяжку?</h5>
+											<div class="options">
+												<div class="options__item">
+													<input id="o_1" class="options__input input" checked type="radio" value="На дому" name="step_1">
+													<label for="o_1" class="options__label">
+														<div class="options__text options__text-ibg"><img src="img/calc/01.jpg" alt="#"></div>
+
+													</label>
+													<h3 class="options__title">На дому</h3>
+												</div>
+												<div class="options__item">
+													<input id="o_2" class="options__input input" checked type="radio" value="В мастерской" name="step_1">
+													<label for="o_2" class="options__label">
+														<div class="options__text options__text-ibg"><img src="img/calc/02.webp" alt="#"></div>
+													</label>
+													<h3 class="options__title">В мастерской</h3>
+												</div>
+											</div>
+										</div>
+										<div class="slide-calculator__content content-slide-calculator">
+											<div class="content-slide-calculator__item">
+
+												<div class="content-slide-calculator__worker">
+													<div class="content-slide-calculator__avatar"><img src="img/calc/avatar.png" alt="avatar">
+													</div>
+													<div class="content-slide-calculator__date">
+														<div class="content-slide-calculator__name">Адам</div>
+														<div class="content-slide-calculator__job-title">старший менеджер</div>
+													</div>
+												</div>
+												<div class="content-slide-calculator__text">
+													<p>Завод GARD производит пустотелые блоки с неповторимым дизайном по методологии
+														покраски Колормикс (ColorMix) с полной покраской бетона на всю глубину:</p>
+												</div>
+											</div>
+											<p class="content-slide-calculator__bottom">
+												Ответьте на 5 вопросов и получите скидку 10% + подарок на выбор!
+
+											</p>
+
+										</div>
+
+									</div>
+									<!-- 2 слайд -->
+									<div class="calculator__slide swiper-slide slide-calculator slide-main-block">
+										<div class="slide-calculator__body">
+											<h5 class="slide-calculator__title">Какую мебель нужно перетянуть?</h5>
+											<div class="options">
+												<div class="options__item">
+													<input id="o_4" class="options__input input" checked type="radio" value="Прямой диван" name="step_2">
+													<label for="o_4" class="options__label">
+														<div class="options__text"><img src="img/calc/03.jpg" alt="#"></div>
+
+													</label>
+													<h3 class="options__title">Прямой диван</h3>
+												</div>
+												<div class="options__item">
+													<input id="o_5" class="options__input input" checked type="radio" value="Угловой диван" name="step_2">
+													<label for="o_5" class="options__label">
+														<div class="options__text"><img src="img/calc/04.jpg" alt="#"></div>
+													</label>
+													<h3 class="options__title">Угловой диван</h3>
+												</div>
+												<div class="options__item">
+													<input id="o_6" class="options__input input" checked type="radio" value="Кровать полностью" name="step_2">
+													<label for="o_6" class="options__label">
+														<div class="options__text"><img src="img/calc/05.jpg" alt="#"></div>
+													</label>
+													<h3 class="options__title">Кровать полностью</h3>
+												</div>
+												<div class="options__item">
+													<input id="o_7" class="options__input input" checked type="radio" value="Кресло" name="step_2">
+													<label for="o_7" class="options__label">
+														<div class="options__text"><img src="img/calc/06.jpg" alt="#"></div>
+													</label>
+													<h3 class="options__title">Кресло</h3>
+												</div>
+												<div class="options__item">
+													<input id="o_8" class="options__input input" checked type="radio" value="Стулья" name="step_2">
+													<label for="o_8" class="options__label">
+														<div class="options__text"><img src="img/calc/07.jpg" alt="#"></div>
+													</label>
+													<h3 class="options__title">Стулья</h3>
+												</div>
+												<div class="options__item">
+													<input id="o_20" class="options__input input" checked type="radio" value="Изголовье кровати" name="step_2">
+													<label for="o_20" class="options__label">
+														<div class="options__text"><img src="img/calc/08.jpg" alt="#"></div>
+													</label>
+													<h3 class="options__title">Изголовье кровати</h3>
+												</div>
+												<div class="options__item">
+													<input id="o_21" class="options__input input" checked type="radio" value="Другая мебель" name="step_2">
+													<label for="o_21" class="options__label">
+														<div class="options__text"><img src="img/calc/09.jpg" alt="#"></div>
+													</label>
+													<h3 class="options__title">Другая мебель</h3>
+												</div>
+											</div>
+										</div>
+										<div class="slide-calculator__content content-slide-calculator">
+
+											<div class="slide-calculator__content content-slide-calculator">
+												<div class="content-slide-calculator__item">
+
+													<div class="content-slide-calculator__worker">
+														<div class="content-slide-calculator__avatar"><img src="img/calc/avatar.png" alt="avatar">
+														</div>
+														<div class="content-slide-calculator__date">
+															<div class="content-slide-calculator__name">Адам</div>
+															<div class="content-slide-calculator__job-title">старший менеджер</div>
+														</div>
+													</div>
+													<div class="content-slide-calculator__text">
+														<p>Завод GARD производит пустотелые блоки с неповторимым дизайном по
+															методологии
+															покраски Колормикс (ColorMix) с полной покраской бетона на всю глубину:</p>
+													</div>
+												</div>
+												<p class="content-slide-calculator__bottom">
+													Ответьте на 5 вопросов и получите скидку 10% + подарок на выбор!
+
+												</p>
+
+											</div>
+
+										</div>
+									</div>
+									<!-- 3 слайд -->
+									<div class="calculator__slide swiper-slide slide-calculator slide-main-block">
+										<div class="slide-calculator__body">
+											<h5 class="slide-calculator__title">Какой именно требуется ремонт?</h5>
+											<div class="slide-calculator__subtitle">Выберите 1 или несколько вариантов и нажмите -
+												Далее</div>
+											<div class="options">
+												<div class="options__item">
+													<input id="o_9" class="options__input input" checked type="checkbox" value="Замена обивочной ткани/кожи" name="step_3">
+													<label for="o_9" class="options__label">
+														<div class="options__text"><img src="img/calc/10.jpg" alt="#"></div>
+
+													</label>
+													<h3 class="options__title">Замена обивочной ткани/кожи</h3>
+												</div>
+												<div class="options__item">
+													<input id="o_10" class="options__input input" type="checkbox" value="Замена наполнителя" name="step_3">
+													<label for="o_10" class="options__label">
+														<div class="options__text"><img src="img/calc/11.jpg" alt="#"></div>
+
+													</label>
+													<h3 class="options__title">Замена наполнителя</h3>
+												</div>
+												<div class="options__item">
+													<input id="o_11" class="options__input input" type="checkbox" value="Замена пружин и пружинных блоков" name="step_3">
+													<label for="o_11" class="options__label">
+														<div class="options__text"><img src="img/calc/12.jpg" alt="#"></div>
+
+													</label>
+													<h3 class="options__title">Замена пружин и пружинных блоков</h3>
+												</div>
+												<div class="options__item">
+													<input id="o_12" class="options__input input" type="checkbox" value="Замена механизмов" name="step_3">
+													<label for="o_12" class="options__label">
+														<div class="options__text"><img src="img/calc/13.jpg" alt="#"></div>
+
+													</label>
+													<h3 class="options__title">Замена механизмов</h3>
+												</div>
+												<div class="options__item">
+													<input id="o_13" class="options__input input" type="checkbox" value="Ремонт каркаса мебели" name="step_3">
+													<label for="o_13" class="options__label">
+														<div class="options__text"><img src="img/calc/14.jpg" alt="#"></div>
+
+													</label>
+													<h3 class="options__title">Ремонт каркаса мебели</h3>
+												</div>
+												<div class="options__item">
+													<input id="o_14" class="options__input input" type="checkbox" value="Затрудняюсь / нужна консультация" name="step_3">
+													<label for="o_14" class="options__label">
+														<div class="options__text"><img src="img/calc/15.jpg" alt="#"></div>
+
+													</label>
+													<h3 class="options__title">Затрудняюсь / нужна консультация</h3>
+												</div>
+
+											</div>
+										</div>
+										<div class="slide-calculator__content content-slide-calculator">
+
+											<div class="slide-calculator__content content-slide-calculator">
+												<div class="content-slide-calculator__item">
+
+													<div class="content-slide-calculator__worker">
+														<div class="content-slide-calculator__avatar"><img src="img/calc/avatar.png" alt="avatar">
+														</div>
+														<div class="content-slide-calculator__date">
+															<div class="content-slide-calculator__name">Адам</div>
+															<div class="content-slide-calculator__job-title">старший менеджер</div>
+														</div>
+													</div>
+													<div class="content-slide-calculator__text">
+														<p>Завод GARD производит пустотелые блоки с неповторимым дизайном по
+															методологии
+															покраски Колормикс (ColorMix) с полной покраской бетона на всю глубину:</p>
+													</div>
+												</div>
+												<p class="content-slide-calculator__bottom">
+													Ответьте на 5 вопросов и получите скидку 10% + подарок на выбор!
+
+												</p>
+
+											</div>
+
+										</div>
+									</div>
+									<!-- 4 слайд -->
+									<div class="calculator__slide swiper-slide slide-calculator slide-main-block">
+										<div class="slide-calculator__body">
+											<h5 class="slide-calculator__title">Какой подарок вы бы хотели при заказе перетяжки?
+											</h5>
+											<div class="options">
+												<div class="options__item">
+													<input id="o_16" class="options__input input" checked type="radio" value="Дизайнерские подушки 40*40" name="step_4">
+													<label for="o_16" class="options__label">
+														<div class="options__text"><img src="img/calc/16.jpg" alt="#"></div>
+
+													</label>
+													<h3 class="options__title">Дизайнерские подушки 40*40</h3>
+												</div>
+												<div class="options__item">
+													<input id="o_17" class="options__input input" checked type="radio" value="Два м2 ткани бесплатно" name="step_4">
+													<label for="o_17" class="options__label">
+														<div class="options__text"><img src="img/calc/17.jpg" alt="#"></div>
+													</label>
+													<h3 class="options__title">Два м2 ткани бесплатно</h3>
+												</div>
+												<div class="options__item">
+													<input id="o_18" class="options__input input" checked type="radio" value="Ремонт каркаса бесплатно" name="step_4">
+													<label for="o_18" class="options__label">
+														<div class="options__text"><img src="img/calc/18.jpg" alt="#"></div>
+													</label>
+													<h3 class="options__title">Ремонт каркаса бесплатно</h3>
+												</div>
+												<div class="options__item">
+													<input id="o_19" class="options__input input" checked type="radio" value="Без подарка" name="step_4">
+													<label for="o_19" class="options__label">
+														<div class="options__text"><img src="img/calc/19.jpg" alt="#"></div>
+													</label>
+													<h3 class="options__title">Без подарка</h3>
+												</div>
+											</div>
+										</div>
+										<div class="slide-calculator__content content-slide-calculator">
+
+											<div class="slide-calculator__content content-slide-calculator">
+												<div class="content-slide-calculator__item">
+
+													<div class="content-slide-calculator__worker">
+														<div class="content-slide-calculator__avatar"><img src="img/calc/avatar.png" alt="avatar">
+														</div>
+														<div class="content-slide-calculator__date">
+															<div class="content-slide-calculator__name">Адам</div>
+															<div class="content-slide-calculator__job-title">старший менеджер</div>
+														</div>
+													</div>
+													<div class="content-slide-calculator__text">
+														<p>Завод GARD производит пустотелые блоки с неповторимым дизайном по
+															методологии
+															покраски Колормикс (ColorMix) с полной покраской бетона на всю глубину:</p>
+													</div>
+												</div>
+												<p class="content-slide-calculator__bottom">
+													Ответьте на 5 вопросов и получите скидку 10% + подарок на выбор!
+
+												</p>
+
+											</div>
+
+										</div>
+									</div>
+									<!-- 5 слайд -->
+									<div class="calculator__slide swiper-slide slide-calculator slide-main-block">
+										<div class="slide-calculator__body">
+											<h5 class="slide-calculator__title">По какому адресу нужно будет приехать мастеру, если
+												наше предложение вам понравится? </h5>
+											<div class="slide-calculator__subtitle">Можно указать только улицу, или улицу и дом
+											</div>
+											<textarea data-autoheight data-autoheight-min='150' data-autoheight-max='200' autocomplete="off" name="text" placeholder="Например: г. Калининград, ул. Горького, 44" class="textarea__input input"></textarea>
+
+										</div>
+										<div class="slide-calculator__content content-slide-calculator">
+
+											<div class="slide-calculator__content content-slide-calculator">
+												<div class="content-slide-calculator__item">
+
+													<div class="content-slide-calculator__worker">
+														<div class="content-slide-calculator__avatar"><img src="img/calc/avatar.png" alt="avatar">
+														</div>
+														<div class="content-slide-calculator__date">
+															<div class="content-slide-calculator__name">Адам</div>
+															<div class="content-slide-calculator__job-title">старший менеджер</div>
+														</div>
+													</div>
+													<div class="content-slide-calculator__text">
+														<p>Завод GARD производит пустотелые блоки с неповторимым дизайном по
+															методологии
+															покраски Колормикс (ColorMix) с полной покраской бетона на всю глубину:</p>
+													</div>
+												</div>
+												<p class="content-slide-calculator__bottom">
+													Ответьте на 5 вопросов и получите скидку 10% + подарок на выбор!
+
+												</p>
+
+											</div>
+
+										</div>
+									</div>
+									<!-- Конечная страница !форма! -->
+									<div class="calculator__slide swiper-slide slide-calculator slide-calculator-block  slide-main-block">
+
+										<div class="slide-calculator-block__content">
+											<h3 class="slide-calculator-block__title-last">Расчёт стоимости будет готов в течение 1
+												минуты . Куда отправить?
+											</h3>
+											<p class="slide-calculator-block__text">
+												Зафиксируем за вашим номером скидку 10% + подарок, который вы выбрали</p>
+											<div class="slide-calculator-block__form">
+												<div class="slide-calculator-block__subtitle">Как удобнее получить?</div>
+												<label class="slide-calculator-block__label">Ваше Имя</label>
+												<input data-required type="text" name="name" data-error="заполните поле" placeholder="Евгений" class="data-contact__input input input-form">
+												<label class="slide-calculator-block__label">Ваш телефон</label>
+												<input data-inputmask="'mask': '375 (99)-999-99-99'" data-required id="phone" type="text" name="phone" data-error="заполните поле" placeholder="+375 (__) ___-__-__" class="data-contact__input input input-form">
+												<!-- <button type="submit" class="slide-calculator-block__button button">Получить примеры + смету + подарок</button> -->
+
+												<button class="slide-calculator-block__button button" type="submit">ПОЛУЧИТЬ РАСЧЁТ
+													СТОИМОСТИ</button>
+												<div class="checkbox">
+													<input id="c_5" data-error="Ознакомтесь с обработкой своих данных" class="checkbox__input" type="checkbox" value="Принято" name="check">
+													<label for="c_5" class="checkbox__label"><span class="checkbox__text">Соглашаюсь
+															с <a href="#" style="color: rgb(22, 216, 0);"><u>обработкой своих
+																	данных</u></a></span>
+
+													</label>
+												</div>
+											</div>
+										</div>
+
+
+									</div>
+								</form>
+
+								<div id="progress" class="calculator__progress">
+									<div class="calculator__progress-body">
+										<div class="calculator__pagination swiper-pagination"></div>
+										<div class="fraction-controll">
+											<span class="fraction-controll__current">01</span>
+											<span class="fraction-controll__all">10</span>
+											<div class="fraction-controll__progress"><span>Готово:</span> 0%</div>
+										</div>
+									</div>
+									<div class="calculator__button-body">
+										<div class="calculator__button-next ">Далее
+											<svg class="mdi-icon mdi-24px" viewBox="0 0 24 24">
+												<path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" stroke-width="0" fill-rule="nonzero"></path>
+											</svg>
+										</div>
+
+										<div class="calculator__button-prev ">
+											<svg class="mdi-icon mdi-24px" viewBox="0 0 24 24">
+												<path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" stroke-width="0" fill-rule="nonzero"></path>
+											</svg>
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+			</section>
+			<section class="page__services services">
+				<div class="services__container">
+					<h2 class="services__title title"><strong>Мы вернём вашей мебели первозданный вид</strong>,а вы
+						<span>сэкономите до 70% на
+							новой</span>
+					</h2>
+					<p class="services__subtitle subtitle">Работаем с любым видом <u>мягкой</u> мебели </p>
+					<!-- Оболонка слайдера -->
+					<div class="services__slider-container">
+						<div class="services__slider swiper">
+							<!-- Частина слайдера, що рухається -->
+							<div class="services__wrapper swiper-wrapper">
+								<!-- Слайд -->
+								<div class="services__slide slide-services swiper-slide">
+									<img class="slide-services__image" src="img/services/01.png" alt="#">
+									<h3 class="slide-services__title">Прямой диван</h3>
+									<div class="slide-services__price">- от 5.000₽</div>
+									<ul class="slide-services__list">
+										<li class="slide-services__item">Замена ткани на новую</li>
+										<li class="slide-services__item">Замена обивки</li>
+										<li class="slide-services__item">Ремонт механизмов</li>
+
+									</ul>
+
+									<a data-popup="#popup" href="#" class="slide-services__button button">Рассчитать
+										стоимость</a>
+								</div>
+								<div class="services__slide slide-services swiper-slide">
+									<img class="slide-services__image" src="img/services/02.png" alt="#">
+									<h3 class="slide-services__title">Угловой диван</h3>
+									<div class="slide-services__price">- от 8.000₽</div>
+									<ul class="slide-services__list">
+										<li class="slide-services__item">Замена ткани на новую</li>
+										<li class="slide-services__item">Замена обивки на новую</li>
+										<li class="slide-services__item">Ремонт механизмов</li>
+
+									</ul>
+
+									<a data-popup="#popup" href="#" class="slide-services__button button">Рассчитать
+										стоимость</a>
+								</div>
+								<div class="services__slide slide-services swiper-slide">
+									<img class="slide-services__image" src="img/services/03.png" alt="#">
+									<h3 class="slide-services__title">Кровать полностью</h3>
+									<div class="slide-services__price">- от 8.000₽</div>
+									<ul class="slide-services__list">
+										<li class="slide-services__item">Замена ткани на новую</li>
+										<li class="slide-services__item">Замена обивки</li>
+										<li class="slide-services__item">Ремонт механизмов</li>
+
+									</ul>
+
+									<a data-popup="#popup" href="#" class="slide-services__button button">Рассчитать
+										стоимость</a>
+								</div>
+								<div class="services__slide slide-services swiper-slide">
+									<img class="slide-services__image" src="img/services/04.png" alt="#">
+									<h3 class="slide-services__title">Кресло</h3>
+									<div class="slide-services__price">- от 3.000₽</div>
+									<ul class="slide-services__list">
+										<li class="slide-services__item">Замена ткани на новую</li>
+										<li class="slide-services__item">Замена обивки</li>
+										<li class="slide-services__item">Ремонт каркаса</li>
+
+									</ul>
+
+									<a data-popup="#popup" href="#" class="slide-services__button button">Рассчитать
+										стоимость</a>
+								</div>
+								<div class="services__slide slide-services swiper-slide">
+									<img class="slide-services__image" src="img/services/05.png" alt="#">
+									<h3 class="slide-services__title">Стулья</h3>
+									<div class="slide-services__price">- от 400₽/шт</div>
+									<ul class="slide-services__list">
+										<li class="slide-services__item">Замена ткани и обивки</li>
+										<li class="slide-services__item">Берём в работу заказы от 2.000 (от 3-4 стульев)</li>
+
+									</ul>
+
+									<a data-popup="#popup" href="#" class="slide-services__button button">Рассчитать
+										стоимость</a>
+								</div>
+								<div class="services__slide slide-services swiper-slide">
+									<img class="slide-services__image" src="img/services/06.png" alt="#">
+									<h3 class="slide-services__title">Изголовье кровати</h3>
+									<div class="slide-services__price">- от 2.000₽</div>
+									<ul class="slide-services__list">
+										<li class="slide-services__item">Замена ткани на новую</li>
+										<li class="slide-services__item">Замена обивки (полная или частичная)</li>
+
+									</ul>
+
+									<a data-popup="#popup" href="#" class="slide-services__button button">Рассчитать
+										стоимость</a>
+								</div>
+
+							</div>
+
+
+						</div>
+						<div class="services__navigacions">
+							<div type="button" class="services-button-prev "></div>
+							<div type="button" class="services-button-next "></div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page__look look">
+				<div class="look__container">
+					<h2 class="look__title title"><strong>Смотрите, как мы стараемся.</strong> Любим свою работу, и
+						гарантируем <span>самые адекватные цены</span></h2>
+					<p class="services__subtitle subtitle">Работаем с любым видом <u>мягкой</u> мебели </p>
+					<div class="look__slider-container">
+						<div class="look__slider swiper">
+							<div class="look__wrapper swiper-wrapper">
+								<div class="look__slide slide-look swiper-slide">
+									<div class="slider">
+										<div class="before">
+											<img src="img/slider-before/01.jpg" alt="#">
+											<span class="before__text">До</span>
+										</div>
+										<div class="after">
+											<img src="img/slider-before/02.jpg" alt="#">
+											<span class="before__text">После</span>
+
+										</div>
+
+
+										<!-- <div class="change">
+											<div class="circle"> <span class="change-left-arrow"></span><span
+													class="change-right-arrow"></span></div>
+										</div> -->
+										<div class="change">
+											<span class="change-left-arrow"></span>
+											<span class="change-right-arrow"></span>
+										</div>
+									</div>
+									<div class="slide-look__content">
+										<h3 class="slide-look__title">Перетянули прямой диван-книжку</h3>
+										<div class="slide-look__top">
+											<div class="slide-look__work"><img src="img/slider-before/local.png" alt="#">Работа в
+												мастерской
+											</div>
+											<div class="slide-look__clock"><img src="img/slider-before/clock.png" alt="#">3 дня
+											</div>
+										</div>
+										<ul class="slide-look__list">
+											<li>Материал: велюр</li>
+											<li>Полностью заменили внешнюю ткань дивана</li>
+											<li>Частично заменили наполнитель</li>
+										</ul>
+										<div class="slide-look__price-body">
+											<div class="slide-look__price-item">
+												<div class="slide-look__price">
+													<p>Цена перетяжки - </p>
+													<span class="slide-look__price-number">11.000₽</span>
+												</div>
+												<div class="slide-look__price">
+													<p>Цена перетяжки - </p>
+													<span class="slide-look__price-number-red">11.000₽</span>
+												</div>
+											</div>
+											<div class="slide-look__price-item-rigth">
+												<img src="img/slider-before/calculator.png" alt="#">
+												<div class="slide-look__price-item-block">
+													<p>Сэкономили клиенту</p>
+													<span>+14.000₽</span>
+												</div>
+											</div>
+										</div>
+										<div class="slide-look__bottom">
+											<a data-popup="#popup" href="#" class="slide-look__button button">отправить фото
+												мебели</a>
+											<a href="#" class="slide-look__link">Рассчитать стоимость перетяжки в калькуляторе
+												→</a>
+										</div>
+									</div>
+								</div>
+								<div class="look__slide slide-look swiper-slide">
+									<div class="slider">
+										<div class="before">
+											<img src="img/slider-before/03.jpg" alt="#">
+											<span class="before__text">До</span>
+										</div>
+										<div class="after">
+											<img src="img/slider-before/04.jpg" alt="#">
+											<span class="before__text">После</span>
+
+										</div>
+
+
+										<!-- <div class="change">
+											<div class="circle"> <span class="change-left-arrow"></span><span
+													class="change-right-arrow"></span></div>
+										</div> -->
+										<div class="change">
+											<span class="change-left-arrow"></span>
+											<span class="change-right-arrow"></span>
+										</div>
+									</div>
+									<div class="slide-look__content">
+										<h3 class="slide-look__title">Перетянули большой угловой диван</h3>
+										<div class="slide-look__top">
+											<div class="slide-look__work"><img src="img/header/local.png" alt="#">Работа в
+												мастерской
+											</div>
+											<div class="slide-look__clock"><img src="img/slider-before/clock.png" alt="#">5 дней
+											</div>
+										</div>
+										<ul class="slide-look__list">
+											<li>Материал: шенилл</li>
+											<li>Полностью заменили внешнюю ткань дивана</li>
+											<li>Частично заменили наполнитель</li>
+										</ul>
+										<div class="slide-look__price-body">
+											<div class="slide-look__price-item">
+												<div class="slide-look__price">
+													<p>Цена перетяжки - </p>
+													<span class="slide-look__price-number">19.500₽</span>
+												</div>
+												<div class="slide-look__price">
+													<p>Цена перетяжки - </p>
+													<span class="slide-look__price-number-red">55.000₽</span>
+												</div>
+											</div>
+											<div class="slide-look__price-item-rigth">
+												<img src="img/slider-before/calculator.png" alt="#">
+												<div class="slide-look__price-item-block">
+													<p>Сэкономили клиенту</p>
+													<span>+35.500₽</span>
+												</div>
+											</div>
+										</div>
+										<div class="slide-look__bottom">
+											<a data-popup="#popup" href="#" class="slide-look__button button">отправить фото
+												мебели</a>
+											<a href="#" class="slide-look__link">Рассчитать стоимость перетяжки в калькуляторе
+												→</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<div type="button" class="look-button-prev swiper-button-prev "></div>
+						<div type="button" class="look-button-next swiper-button-next"></div>
+					</div>
+
+				</div>
+			</section>
+			<section class="steps">
+				<div class="steps__container">
+					<h2 class="steps__title title"><strong>Перетяжка мебели — это быстро и удобно.</strong> Работаем по всему
+						<span>Калининграду</span>
+					</h2>
+					<p class="steps__subtitle subtitle">Расскажем про каждый шаг нашей работы</p>
+					<div class="steps__items">
+						<div class="steps__item">
+							<div class="steps__content">
+								<div class="steps__step">ШАГ 1</div>
+								<h3 class="steps__item-title">Рассчитываем стоимость перетяжки</h3>
+								<p class="steps__text"><a href="#">Рассчитайте цену в калькуляторе</a>
+									, или отправьте фото испорченной мебели
+									<a href="#" target="_blank" rel="noreferrer noopener" style="color: rgb(3, 161, 27);">в
+										WhatsApp нашему менеджеру</a>
+								</p>
+							</div>
+							<div class="steps__image"><img src="img/steps/01.png" alt="#"></div>
+						</div>
+						<div class="steps__item">
+							<div class="steps__content">
+								<div class="steps__step">ШАГ 2</div>
+								<h3 class="steps__item-title">Рассчитываем стоимость перетяжки</h3>
+								<p class="steps__text">
+									Мастер приедет с образцами тканей, предложит варианты.
+									<strong>Если вам всё понравится,</strong>
+									подпишем договор
+								</p>
+							</div>
+							<div class="steps__image"><img src="img/steps/02.png" alt="#"></div>
+						</div>
+						<div class="steps__item">
+							<div class="steps__content">
+								<div class="steps__step">ШАГ 3</div>
+								<h3 class="steps__item-title">Рассчитываем стоимость перетяжки</h3>
+								<p class="steps__text">
+									Швеи готовят
+									<strong>новую ткань</strong>
+									для обивки. Далее наши мастера проводят перетяжку
+								</p>
+							</div>
+							<div class="steps__image"><img src="img/steps/03.png" alt="#">
+								<div class="steps__item-decor">
+									<img src="img/steps/sand-clock.png" alt="">
+
+								</div>
+							</div>
+						</div>
+						<div class="steps__item">
+							<div class="steps__content">
+								<div class="steps__step">ШАГ 4</div>
+								<h3 class="steps__item-title">Рассчитываем стоимость перетяжки</h3>
+								<p class="steps__text">
+									Транспортировка мебели
+									<strong>к вам домой</strong>
+									и подъём в квартиру. Оплата работы
+								</p>
+							</div>
+							<div class="steps__image"><img src="img/steps/04.png" alt="#"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page__material material">
+				<div class="material__container">
+					<h2 class="material__title title">В наличии широкий выбор материалов для перетяжки. У каждого есть
+						<span>свои преимущества</span>
+					</h2>
+					<p class="steps__subtitle subtitle">Поможем подобрать <u>лучший</u> вариант</p>
+
+					<!-- Оболонка слайдера -->
+					<div class="material__slider-container">
+						<div class="material__slider swiper">
+							<!-- Частина слайдера, що рухається -->
+							<div class="material__wrapper swiper-wrapper">
+								<!-- Слайд -->
+								<div class="material__slide slide-material swiper-slide">
+									<div class="slide-material__image-body">
+										<img class="slide-material__image" src="img/material/01.png" alt="#">
+										<span data-tippy-content="Материал «дышит», не является аллергенным, не растягивается и не проседает со временем, не вытирается и не выгорает при прямом солнечном свете" class="slide-material__tippy">+</span>
+									</div>
+									<h3 class="slide-material__title">Шенилл</h3>
+
+									<p class="slide-material__text">Один из самых популярных материалов, используемых при обивке
+										диванов</p>
+									<a data-popup="#popup" class="slide-material__button button" href="#">консультация
+										по
+										материалу</a>
+								</div>
+								<div class="material__slide slide-material swiper-slide">
+									<div class="slide-material__image-body">
+										<img class="slide-material__image" src="img/material/02.png" alt="#">
+										<span data-tippy-content="Материалы, широко используемые при изготовлении мягкой мебели и призванные заменить собой натуральную кожу" class="slide-material__tippy">+</span>
+									</div>
+									<h3 class="slide-material__title">Эко-кожа</h3>
+
+									<p class="slide-material__text">Обладает большей воздухопроницаемостью, что позволяет дивану
+										«дышать».</p>
+									<a data-popup="#popup-two" class="slide-material__button button" href="#">консультация
+										по материалу</a>
+								</div>
+								<div class="material__slide slide-material swiper-slide">
+									<div class="slide-material__image-body">
+										<img class="slide-material__image" src="img/material/03.png" alt="#">
+										<span data-tippy-content="Рогожка отлично подходит для придания мягкой мебели эффекта «брутальности», так этот материал имеет ярко выраженную грубую структуру." class="slide-material__tippy">+</span>
+									</div>
+									<h3 class="slide-material__title">Рогожка</h3>
+
+									<p class="slide-material__text">Отличается более плотной структурой с высокой прочностью и
+										надёжностью</p>
+									<a data-popup="#popup" class="slide-material__button button" href="#">консультация
+										по материалу</a>
+								</div>
+								<div class="material__slide slide-material swiper-slide">
+									<div class="slide-material__image-body">
+										<img class="slide-material__image" src="img/material/04.jpg" alt="#">
+										<span data-tippy-content="Современная разновидность гобелена – жаккард. Более мягкий на ощупь, чем гобелен, оставаясь прочным и устойчивым к истиранию" class="slide-material__tippy">+</span>
+									</div>
+									<h3 class="slide-material__title">Жаккард</h3>
+
+									<p class="slide-material__text">Более тонкие структурные волокна, мягкий на ощупь, прочный
+									</p>
+									<a data-popup="#popup" class="slide-material__button button" href="#">консультация
+										по материалу</a>
+								</div>
+								<div class="material__slide slide-material swiper-slide">
+									<div class="slide-material__image-body">
+										<img class="slide-material__image" src="img/material/05.jpg" alt="#">
+										<span data-tippy-content="Этот материал является одним из самых доступных по цене и в основном используется при производстве диванов для детей и молодежи" class="slide-material__tippy">+</span>
+									</div>
+									<h3 class="slide-material__title">Велюр</h3>
+
+									<p class="slide-material__text">Мягкая ворсистая ткань, приятная на ощупь</p>
+									<a data-popup="#popup" class="slide-material__button button" href="#">консультация
+										по материалу</a>
+								</div>
+								<div class="material__slide slide-material swiper-slide">
+									<div class="slide-material__image-body">
+										<img class="slide-material__image" src="img/material/06.png" alt="#">
+										<span data-tippy-content="Этот материал приятный на ощупь и обладает хорошими эксплуатационными свойствами. По сути, искусственный мех идентичен искусственной замше по составу, но отличается большей длиной ворса" class="slide-material__tippy">+</span>
+									</div>
+									<h3 class="slide-material__title">Искусственный мех</h3>
+
+									<p class="slide-material__text">Материал приятный на ощупь, для особых видов мебели</p>
+									<a data-popup="#popup" class="slide-material__button button" href="#">консультация
+										по материалу</a>
+								</div>
+							</div>
+
+						</div>
+						<div class="material__navigacions">
+							<button type="button" class="material-button-prev "></button>
+							<button type="button" class="material-button-next "></button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="reviews">
+				<div class="reviews__container">
+					<h2 class="reviews__title title"><strong>Невозможно быть идеальными, но мы очень стараемся</strong> и
+						получаем <span>высокие оценки</span></h2>
+					<p class="reviews__subtitle subtitle ">Оказываем самый лучший сервис в городе</p>
+					<div class="reviews__body">
+						<div class="reviews__slider swiper">
+							<div data-gallery class="reviews__wrapper swiper-wrapper">
+								<a href="img/reviews/01.jpg" class="reviews__slide swiper-slide">
+									<img src="img/reviews/01.jpg">
+								</a>
+								<a href="img/reviews/02.jpg" class="reviews__slide swiper-slide">
+									<img src="img/reviews/02.jpg">
+								</a>
+								<a href="img/reviews/03.jpg" class="reviews__slide swiper-slide">
+									<img src="img/reviews/03.jpg">
+								</a>
+								<a href="img/reviews/04.jpg" class="reviews__slide swiper-slide">
+									<img src="img/reviews/04.jpg">
+								</a>
+							</div>
+							<!-- Якщо потрібна пагінація -->
+							<div class="swiper-pagination"></div>
+
+							<div class="swiper-scrollbar"></div>
+						</div>
+						<div class="reviews__images">
+							<img class="reviews__image-men" src="img/reviews/men.jpg" alt="#">
+							<div class="reviews__image-block">
+								<img class="reviews__image-logo" src="img/reviews/log.jpg" alt="#">
+								<img class="reviews__image-stars" src="img/reviews/stars.jpg" alt="#">
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="send">
+				<div class="send__container">
+					<h2 class="send__title title"><strong>Отправьте нам фото испорченной мебели</strong> и
+						<span>узнайте</span> цену перетяжки
+					</h2>
+					<p class="send__subtitle subtitle ">Если всё понравится, запишем вас на замер</p>
+					<div class="send__body">
+						<div class="send__content content-send">
+							<p class="content-send__text"><strong>Точность оценки по фото - до 95%!</strong>
+								Итоговая стоимость озвучивается на
+								<span style="color: rgb(33, 120, 255);">бесплатном замере</span>
+							</p>
+							<div class="content-send__label">Выберите удобный способ:</div>
+							<div class="content-send__buttons">
+								<a data-popup="#popup" class="content-send__button content-send__button--blue " href="#">
+									<strong>Отправить фото </strong>
+									<span>через заявку на сайте</span>
+
+								</a>
+								<a class="content-send__button content-send__button--green " href="#">
+									<strong>Отправить фото </strong>
+									<span>менеджеру в whatsapp</span>
+
+								</a>
+
+							</div>
+						</div>
+						<div class="send__qr qr-send">
+							<p class="qr-send__text">Смотрите с компьютера? Сканируйте QR-код, чтобы открыть чат с менеджером
+							</p>
+							<img class="qr-send__image" src="img/send/qr.jpg" alt="#">
+						</div>
+						<div class="send__image-phone">
+							<img src="img/send/phone.png" alt="#">
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="contact">
+				<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A933d21548267111e28299a1579e2059cb328fb2ff4394ccfd981e1c186ee4e9b&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
+				<div class="contact__container">
+					<div class="contact__body">
+						<div class="contact__content">
+							<h2 class="contact__title">Контакты</h2>
+							<div class="contact__phone">
+								<div class="contact__phone-icon"><img src="img/contact/phone.png" alt="#"></div>
+								<div class="contact__phone-block">
+									<a class="contact__phone-link" href="tel:79062129450">+7 (906) 212-94-50</a>
+									<a class="contact__phone-link" href="tel:79097958209">+7 (909) 795-82-09</a>
+								</div>
+
+
+							</div>
+							<address class="contact__addres">
+								<div class="contact__addres-icon"><img src="img/contact/local.png" alt="#"></div>
+								<p class="contact__addres-text">г. Калининград, ул. Генерала Соммера 21</p>
+							</address>
+							<div class="contact__social">
+								<div class="contact__social-body">
+									<img class="contact__social-icon" src="img/contact/chat.png" alt="#">
+									<p class="contact__social-text">Мессенджеры и соц. сети:</p>
+								</div>
+								<div class="contact__social-buttons">
+									<a href="#"><img src="img/contact/whatsap.png" alt="#"></a>
+									<a href="#"><img src="img/contact/tel.png" alt="#"></a>
+
+								</div>
+							</div>
+							<a data-popup="#popup" class="contact__button button" href="#">ЗАКАЗАТЬ ЗВОНОК</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- <div class="map">
+			
+			</div> -->
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="header__logo-body">
+					<a href="#" class="header__logo"><img src="img/header/logo.png" alt="#"></a>
+
+					<div class="header__content footer-content">
+						<p class="header__logo-title">МАстер мебели 39</p>
+						<p class="header__logo-text">Перетяжка мебели в Калининграде</p>
+					</div>
+				</div>
+				<div class="footer__text">
+					© Все права защищены.
+					<a href="#" style="color: rgb(39, 124, 255);" role="button" aria-haspopup="dialog">Политика
+						конфиденциальности</a>
+					WhatsApp принадлежат компании META - запрещённой в РФ
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="js/app.min.js?_v=20250418171618"></script>
+</body>
+
+</html>
