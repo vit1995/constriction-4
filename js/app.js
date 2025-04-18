@@ -3270,8 +3270,46 @@
                 document.documentElement.classList.add(className);
             }));
         }
+        let isMobile = {
+            Android: function() {
+                return navigator.userAgent.match(/Android/i);
+            },
+            BlackBerry: function() {
+                return navigator.userAgent.match(/BlackBerry/i);
+            },
+            iOS: function() {
+                return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+            },
+            Opera: function() {
+                return navigator.userAgent.match(/Opera Mini/i);
+            },
+            Windows: function() {
+                return navigator.userAgent.match(/IEMobile/i);
+            },
+            any: function() {
+                return isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows();
+            }
+        };
+        function addLoadedClass() {
+            if (!document.documentElement.classList.contains("loading")) window.addEventListener("load", (function() {
+                setTimeout((function() {
+                    document.documentElement.classList.add("loaded");
+                }), 0);
+            }));
+        }
         function getHash() {
             if (location.hash) return location.hash.replace("#", "");
+        }
+        function fullVHfix() {
+            const fullScreens = document.querySelectorAll("[data-fullscreen]");
+            if (fullScreens.length && isMobile.any()) {
+                window.addEventListener("resize", fixHeight);
+                function fixHeight() {
+                    let vh = .01 * window.innerHeight;
+                    document.documentElement.style.setProperty("--vh", `${vh}px`);
+                }
+                fixHeight();
+            }
         }
         let bodyLockStatus = true;
         let bodyLockToggle = (delay = 500) => {
@@ -5955,7 +5993,9 @@
             render
         });
         const tippy_esm = tippy;
-        flsModules.tippy = tippy_esm("[data-tippy-content]", {});
+        if (/Mobi|Android/i.test(navigator.userAgent)) flsModules.tippy = tippy_esm("[data-tippy-content]", {
+            trigger: "click"
+        }); else flsModules.tippy = tippy_esm("[data-tippy-content]", {});
         function ssr_window_esm_isObject(obj) {
             return null !== obj && "object" === typeof obj && "constructor" in obj && obj.constructor === Object;
         }
@@ -11761,7 +11801,9 @@ PERFORMANCE OF THIS SOFTWARE.
         }));
         window["FLS"] = true;
         isWebp();
+        addLoadedClass();
         menuInit();
+        fullVHfix();
         formFieldsInit({
             viewPass: false,
             autoHeight: true

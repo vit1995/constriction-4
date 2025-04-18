@@ -225,9 +225,7 @@ textarea.input {
 }
 
 .checkbox__input:checked + .checkbox__label:before {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgb(63, 55, 138)), to(rgb(41, 53, 121)));
-  background-image: -o-linear-gradient(bottom, rgb(63, 55, 138) 0%, rgb(41, 53, 121) 100%);
-  background-image: linear-gradient(0turn, rgb(63, 55, 138) 0%, rgb(41, 53, 121) 100%);
+  background-color: #478fff;
 }
 
 .checkbox__input:checked + .checkbox__label::after {
@@ -269,7 +267,7 @@ textarea.input {
   transition: all 0.3s ease 0s;
   position: absolute;
   color: white;
-  left: 3px;
+  left: 4px;
   top: 3px;
   font-size: 0.625rem;
   -webkit-transform: scale(0);
@@ -1054,7 +1052,13 @@ body::after {
   -o-transition: all 1s ease 0s;
   transition: all 1s ease 0s;
   margin: 0 auto;
-  max-width: 1170px;
+  max-width: 1140px;
+  opacity: 1;
+  padding: 0.625rem 0.9375rem;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
   width: 100%;
 }
 
